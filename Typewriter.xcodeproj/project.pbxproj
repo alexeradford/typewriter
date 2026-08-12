@@ -3,14 +3,41 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 110;
+	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		24C0A1013015000000000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23F51B883010D8E9003536C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23F51B8F3010D8E9003536C2;
+			remoteInfo = Typewriter;
+		};
+		24C0B1013024000000000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23F51B883010D8E9003536C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23B2CA6830234DF100E46A92;
+			remoteInfo = "Typewriter iOS";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		23B2CA6930234DF100E46A92 /* Typewriter iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Typewriter iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23F51B903010D8E9003536C2 /* Typewriter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Typewriter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		24C0A1023015000000000002 /* TypewriterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TypewriterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		24C0B1023024000000000002 /* Typewriter iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Typewriter iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		23B2CA7B3023500000E46A92 /* Exceptions for "Typewriter iOS" folder in "Typewriter iOS" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 23B2CA6830234DF100E46A92 /* Typewriter iOS */;
+		};
 		23F51B9F3010D8EC003536C2 /* Exceptions for "Typewriter" folder in "Typewriter" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -21,6 +48,19 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		23B2CA6A30234DF100E46A92 /* Typewriter iOS */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				23B2CA7B3023500000E46A92 /* Exceptions for "Typewriter iOS" folder in "Typewriter iOS" target */,
+			);
+			path = "Typewriter iOS";
+			sourceTree = "<group>";
+		};
+		23B2CA7A3023500000E46A92 /* Shared */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		23F51B923010D8E9003536C2 /* Typewriter */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -29,13 +69,46 @@
 			path = Typewriter;
 			sourceTree = "<group>";
 		};
+		24C0A1033015000000000003 /* TypewriterTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = TypewriterTests;
+			sourceTree = "<group>";
+		};
+		24C0B1033024000000000003 /* Typewriter iOSTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Typewriter iOSTests";
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		23F51B8D3010D8E9003536C2 /* Frameworks */ = {
+		23B2CA6630234DF100E46A92 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
 			files = (
 			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23F51B8D3010D8E9003536C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24C0A1043015000000000004 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24C0B1043024000000000004 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
@@ -44,6 +117,10 @@
 			isa = PBXGroup;
 			children = (
 				23F51B923010D8E9003536C2 /* Typewriter */,
+				23B2CA7A3023500000E46A92 /* Shared */,
+				24C0A1033015000000000003 /* TypewriterTests */,
+				24C0B1033024000000000003 /* Typewriter iOSTests */,
+				23B2CA6A30234DF100E46A92 /* Typewriter iOS */,
 				23F51B913010D8E9003536C2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,6 +129,9 @@
 			isa = PBXGroup;
 			children = (
 				23F51B903010D8E9003536C2 /* Typewriter.app */,
+				24C0A1023015000000000002 /* TypewriterTests.xctest */,
+				24C0B1023024000000000002 /* Typewriter iOSTests.xctest */,
+				23B2CA6930234DF100E46A92 /* Typewriter iOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -59,6 +139,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		23B2CA6830234DF100E46A92 /* Typewriter iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23B2CA7330234DF400E46A92 /* Build configuration list for PBXNativeTarget "Typewriter iOS" */;
+			buildPhases = (
+				23B2CA6530234DF100E46A92 /* Sources */,
+				23B2CA6630234DF100E46A92 /* Frameworks */,
+				23B2CA6730234DF100E46A92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				23B2CA6A30234DF100E46A92 /* Typewriter iOS */,
+				23B2CA7A3023500000E46A92 /* Shared */,
+			);
+			name = "Typewriter iOS";
+			packageProductDependencies = (
+			);
+			productName = "Typewriter iOS";
+			productReference = 23B2CA6930234DF100E46A92 /* Typewriter iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 		23F51B8F3010D8E9003536C2 /* Typewriter */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 23F51BA03010D8EC003536C2 /* Build configuration list for PBXNativeTarget "Typewriter" */;
@@ -69,13 +172,58 @@
 			);
 			buildRules = (
 			);
+			dependencies = (
+			);
 			fileSystemSynchronizedGroups = (
+				23B2CA7A3023500000E46A92 /* Shared */,
 				23F51B923010D8E9003536C2 /* Typewriter */,
 			);
 			name = Typewriter;
 			productName = Typewriter;
 			productReference = 23F51B903010D8E9003536C2 /* Typewriter.app */;
 			productType = "com.apple.product-type.application";
+		};
+		24C0A1053015000000000005 /* TypewriterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24C0A10C301500000000000C /* Build configuration list for PBXNativeTarget "TypewriterTests" */;
+			buildPhases = (
+				24C0A1063015000000000006 /* Sources */,
+				24C0A1043015000000000004 /* Frameworks */,
+				24C0A1073015000000000007 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				24C0A1083015000000000008 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				24C0A1033015000000000003 /* TypewriterTests */,
+			);
+			name = TypewriterTests;
+			productName = TypewriterTests;
+			productReference = 24C0A1023015000000000002 /* TypewriterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		24C0B1053024000000000005 /* Typewriter iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24C0B10C302400000000000C /* Build configuration list for PBXNativeTarget "Typewriter iOSTests" */;
+			buildPhases = (
+				24C0B1063024000000000006 /* Sources */,
+				24C0B1043024000000000004 /* Frameworks */,
+				24C0B1073024000000000007 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				24C0B1083024000000000008 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				24C0B1033024000000000003 /* Typewriter iOSTests */,
+			);
+			name = "Typewriter iOSTests";
+			productName = "Typewriter iOSTests";
+			productReference = 24C0B1023024000000000002 /* Typewriter iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -85,10 +233,21 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2700;
-				LastUpgradeCheck = 2700;
+				LastUpgradeCheck = 2650;
 				TargetAttributes = {
-					23F51B8F3010D8E9003536C2 = {
+					23B2CA6830234DF100E46A92 = {
 						CreatedOnToolsVersion = 27.0;
+					};
+					23F51B8F3010D8E9003536C2 = {
+						CreatedOnToolsVersion = 26.5;
+					};
+					24C0A1053015000000000005 = {
+						CreatedOnToolsVersion = 26.5;
+						TestTargetID = 23F51B8F3010D8E9003536C2;
+					};
+					24C0B1053024000000000005 = {
+						CreatedOnToolsVersion = 27.0;
+						TestTargetID = 23B2CA6830234DF100E46A92;
 					};
 				};
 			};
@@ -107,48 +266,195 @@
 			projectRoot = "";
 			targets = (
 				23F51B8F3010D8E9003536C2 /* Typewriter */,
+				24C0A1053015000000000005 /* TypewriterTests */,
+				23B2CA6830234DF100E46A92 /* Typewriter iOS */,
+				24C0B1053024000000000005 /* Typewriter iOSTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		23F51B8E3010D8E9003536C2 /* Resources */ = {
+		23B2CA6730234DF100E46A92 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
 			files = (
 			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23F51B8E3010D8E9003536C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24C0A1073015000000000007 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24C0B1073024000000000007 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		23F51B8C3010D8E9003536C2 /* Sources */ = {
+		23B2CA6530234DF100E46A92 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
 			files = (
 			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23F51B8C3010D8E9003536C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24C0A1063015000000000006 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24C0B1063024000000000006 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		24C0A1083015000000000008 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23F51B8F3010D8E9003536C2 /* Typewriter */;
+			targetProxy = 24C0A1013015000000000001 /* PBXContainerItemProxy */;
+		};
+		24C0B1083024000000000008 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23B2CA6830234DF100E46A92 /* Typewriter iOS */;
+			targetProxy = 24C0B1013024000000000001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		23F51BA13010D8EC003536C2 /* Debug configuration for PBXNativeTarget "Typewriter" */ = {
+		23B2CA7130234DF400E46A92 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Typewriter iOS/Typewriter iOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 5YRRR4QV3V;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Typewriter iOS/Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.alexradford.Typewriter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		23B2CA7230234DF400E46A92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Typewriter iOS/Typewriter iOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 5YRRR4QV3V;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Typewriter iOS/Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.alexradford.Typewriter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		23F51BA13010D8EC003536C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = Typewriter/Typewriter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9PF5C47T7X;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 5YRRR4QV3V;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = NO;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = YES;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
 				ENABLE_USER_SELECTED_FILES = readwrite;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Typewriter/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 26.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ca.alexradford.Typewriter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -162,27 +468,39 @@
 			};
 			name = Debug;
 		};
-		23F51BA23010D8EC003536C2 /* Release configuration for PBXNativeTarget "Typewriter" */ = {
+		23F51BA23010D8EC003536C2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = Typewriter/Typewriter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9PF5C47T7X;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 5YRRR4QV3V;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = NO;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = YES;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
 				ENABLE_USER_SELECTED_FILES = readwrite;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Typewriter/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 26.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ca.alexradford.Typewriter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -196,7 +514,7 @@
 			};
 			name = Release;
 		};
-		23F51BA33010D8EC003536C2 /* Debug configuration for PBXProject "Typewriter" */ = {
+		23F51BA33010D8EC003536C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -250,7 +568,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -260,7 +578,7 @@
 			};
 			name = Debug;
 		};
-		23F51BA43010D8EC003536C2 /* Release configuration for PBXProject "Typewriter" */ = {
+		23F51BA43010D8EC003536C2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -308,7 +626,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -316,27 +634,143 @@
 			};
 			name = Release;
 		};
+		24C0A1093015000000000009 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9PF5C47T7X;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.alexradford.TypewriterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Typewriter.app/Contents/MacOS/Typewriter";
+			};
+			name = Debug;
+		};
+		24C0A10A301500000000000A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9PF5C47T7X;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.alexradford.TypewriterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Typewriter.app/Contents/MacOS/Typewriter";
+			};
+			name = Release;
+		};
+		24C0B1093024000000000009 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5YRRR4QV3V;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.alexradford.Typewriter-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Typewriter iOS.app/Typewriter iOS";
+			};
+			name = Debug;
+		};
+		24C0B10A302400000000000A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5YRRR4QV3V;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.alexradford.Typewriter-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Typewriter iOS.app/Typewriter iOS";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		23B2CA7330234DF400E46A92 /* Build configuration list for PBXNativeTarget "Typewriter iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23B2CA7130234DF400E46A92 /* Debug */,
+				23B2CA7230234DF400E46A92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		23F51B8B3010D8E9003536C2 /* Build configuration list for PBXProject "Typewriter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				23F51BA33010D8EC003536C2 /* Debug configuration for PBXProject "Typewriter" */,
-				23F51BA43010D8EC003536C2 /* Release configuration for PBXProject "Typewriter" */,
+				23F51BA33010D8EC003536C2 /* Debug */,
+				23F51BA43010D8EC003536C2 /* Release */,
 			);
+			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		23F51BA03010D8EC003536C2 /* Build configuration list for PBXNativeTarget "Typewriter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				23F51BA13010D8EC003536C2 /* Debug configuration for PBXNativeTarget "Typewriter" */,
-				23F51BA23010D8EC003536C2 /* Release configuration for PBXNativeTarget "Typewriter" */,
+				23F51BA13010D8EC003536C2 /* Debug */,
+				23F51BA23010D8EC003536C2 /* Release */,
 			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24C0A10C301500000000000C /* Build configuration list for PBXNativeTarget "TypewriterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24C0A1093015000000000009 /* Debug */,
+				24C0A10A301500000000000A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24C0B10C302400000000000C /* Build configuration list for PBXNativeTarget "Typewriter iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24C0B1093024000000000009 /* Debug */,
+				24C0B10A302400000000000A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
 	rootObject = 23F51B883010D8E9003536C2 /* Project object */;
-	validationLevel = 1;
 }

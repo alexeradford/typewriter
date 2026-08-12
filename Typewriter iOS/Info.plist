@@ -2,8 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSQuitAlwaysKeepsWindows</key>
-	<false/>
+	<key>CFBundleDisplayName</key>
+	<string>Typewriter</string>
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>
@@ -11,18 +11,18 @@
 			<string>Typewriter Document</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
-			<key>LSTypeIsPackage</key>
-			<true/>
 			<key>LSHandlerRank</key>
 			<string>Owner</string>
 			<key>LSItemContentTypes</key>
 			<array>
 				<string>ca.alexradford.typewriter-document</string>
 			</array>
-			<key>NSDocumentClass</key>
-			<string>$(PRODUCT_MODULE_NAME).Document</string>
+			<key>LSTypeIsPackage</key>
+			<true/>
 		</dict>
 	</array>
+	<key>LSSupportsOpeningDocumentsInPlace</key>
+	<true/>
 	<key>NSUbiquitousContainers</key>
 	<dict>
 		<key>iCloud.ca.alexradford.Typewriter</key>
@@ -35,6 +35,8 @@
 			<string>Any</string>
 		</dict>
 	</dict>
+	<key>UISupportsDocumentBrowser</key>
+	<true/>
 	<key>UTExportedTypeDeclarations</key>
 	<array>
 		<dict>
