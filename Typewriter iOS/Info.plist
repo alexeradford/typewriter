@@ -22,7 +22,7 @@
 		</dict>
 	</array>
 	<key>LSSupportsOpeningDocumentsInPlace</key>
-	<true/>
+	<false/>
 	<key>NSUbiquitousContainers</key>
 	<dict>
 		<key>iCloud.ca.alexradford.Typewriter</key>
@@ -35,8 +35,6 @@
 			<string>Any</string>
 		</dict>
 	</dict>
-	<key>UISupportsDocumentBrowser</key>
-	<true/>
 	<key>UTExportedTypeDeclarations</key>
 	<array>
 		<dict>

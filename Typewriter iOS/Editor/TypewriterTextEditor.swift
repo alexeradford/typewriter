@@ -3,9 +3,14 @@ import SwiftUI
 struct TypewriterTextEditor: UIViewRepresentable {
     let document: TypewriterMobileDocument
     let session: TypewriterEditorSession
+    @Binding var isEditing: Bool
 
     func makeCoordinator() -> Coordinator {
-        Coordinator(document: document, session: session)
+        Coordinator(
+            document: document,
+            session: session,
+            isEditing: $isEditing
+        )
     }
 
     func makeUIView(context: Context) -> EditorTextView {
@@ -27,6 +32,7 @@ struct TypewriterTextEditor: UIViewRepresentable {
             right: 24
         )
         textView.textContainer.lineFragmentPadding = 0
+        textView.isScrollEnabled = true
         textView.alwaysBounceVertical = true
         textView.keyboardDismissMode = .interactive
         textView.autocorrectionType = .yes
@@ -45,27 +51,43 @@ struct TypewriterTextEditor: UIViewRepresentable {
                 - textView.textContainerInset.left
                 - textView.textContainerInset.right
         )
-        context.coordinator.textSystem?.configureContinuousLayout(
-            containerWidth: contentWidth
-        )
+        context.coordinator.updateLayout(containerWidth: contentWidth)
         context.coordinator.update(document: document)
+    }
+
+    func sizeThatFits(
+        _ proposal: ProposedViewSize,
+        uiView: EditorTextView,
+        context: Context
+    ) -> CGSize? {
+        guard
+            let width = proposal.width,
+            let height = proposal.height
+        else {
+            return nil
+        }
+        return CGSize(width: width, height: height)
     }
 
     final class Coordinator {
         private weak var document: TypewriterMobileDocument?
         private let session: TypewriterEditorSession
+        private var isEditing: Binding<Bool>
         private(set) var textSystem: EditorTextSystem?
         private var documentID: UUID
         private var loadedContentRevision: Int
+        private var configuredContainerWidth: CGFloat?
 
         init(
             document: TypewriterMobileDocument,
-            session: TypewriterEditorSession
+            session: TypewriterEditorSession,
+            isEditing: Binding<Bool>
         ) {
             self.document = document
             self.session = session
             documentID = document.metadata.documentID
             loadedContentRevision = document.contentRevision
+            self.isEditing = isEditing
         }
 
         func install(_ textSystem: EditorTextSystem) {
@@ -87,6 +109,22 @@ struct TypewriterTextEditor: UIViewRepresentable {
             textSystem.textView.contentDidChange = { [weak self] in
                 self?.editorContentDidChange()
             }
+            textSystem.textView.editingDidBegin = { [weak self] in
+                self?.isEditing.wrappedValue = true
+            }
+            textSystem.textView.editingDidEnd = { [weak self] in
+                self?.isEditing.wrappedValue = false
+            }
+        }
+
+        func updateLayout(containerWidth: CGFloat) {
+            let width = max(1, containerWidth)
+            if let configuredContainerWidth,
+               abs(configuredContainerWidth - width) < 0.5 {
+                return
+            }
+            configuredContainerWidth = width
+            textSystem?.configureContinuousLayout(containerWidth: width)
         }
 
         func update(document: TypewriterMobileDocument) {

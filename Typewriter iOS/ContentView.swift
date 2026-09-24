@@ -3,21 +3,28 @@ import UniformTypeIdentifiers
 
 struct ContentView: View {
     @ObservedObject var document: TypewriterMobileDocument
-    let fileURL: URL?
+    let save: (TypewriterMobileDocument) async -> Void
 
     @State private var session = TypewriterEditorSession()
     @State private var isImportingImage = false
+    @State private var isEditing = false
     @State private var textColor = Color.primary
 
     var body: some View {
         @Bindable var session = session
 
-        TypewriterTextEditor(document: document, session: session)
+        TypewriterTextEditor(
+            document: document,
+            session: session,
+            isEditing: $isEditing
+        )
             .safeAreaInset(edge: .bottom, spacing: 0) {
-                EditorFormattingBar(
-                    session: session,
-                    textColor: $textColor
-                )
+                if isEditing {
+                    EditorKeyboardFormattingBar(
+                        session: session,
+                        textColor: $textColor
+                    )
+                }
             }
             .navigationTitle(displayTitle)
             .navigationBarTitleDisplayMode(.inline)
@@ -32,10 +39,12 @@ struct ContentView: View {
                         session: session
                     )
                 }
-                ToolbarItemGroup(placement: .keyboard) {
-                    EditorKeyboardToolbar(
+                if !isEditing {
+                    EditorFormattingToolbar(
+                        placement: .bottomBar,
+                        includesSpacer: true,
                         session: session,
-                        isImportingImage: $isImportingImage
+                        textColor: $textColor
                     )
                 }
             }
@@ -62,17 +71,22 @@ struct ContentView: View {
                     session.dismissError()
                 }
             }
+            .task(id: document.revision) {
+                guard document.hasUnsavedChanges else { return }
+                try? await Task.sleep(for: .milliseconds(500))
+                guard !Task.isCancelled else { return }
+                await save(document)
+            }
     }
 
     private var displayTitle: String {
-        fileURL?.deletingPathExtension().lastPathComponent
-            ?? document.metadata.title
+        document.metadata.title
     }
 
 }
 
 #Preview {
     NavigationStack {
-        ContentView(document: TypewriterMobileDocument(), fileURL: nil)
+        ContentView(document: TypewriterMobileDocument()) { _ in }
     }
 }

@@ -118,7 +118,9 @@ Printing creates a second, unpaginated TextKit 2 system on macOS and lets
 - `Shared/Documents` and `Shared/Editor` compile into both app targets.
 - `Typewriter/Editor` owns AppKit canvas, event, integration, and print-facing
   behavior.
-- `Typewriter iOS/Documents` owns the SwiftUI `ReferenceFileDocument` lifecycle.
+- `Typewriter iOS/Documents` owns the observable mobile document model.
+- `Typewriter iOS/Library` owns coordinated package discovery, opening,
+  autosave, import, and deletion for the in-app Library.
 - `Typewriter iOS/Editor` owns the UIKit bridge, SwiftUI representable, and
   observable formatting session.
 
@@ -133,5 +135,7 @@ app's UI or lifecycle code. Its intended public surface is:
 - layout-height and content-change callbacks.
 
 Mac page chrome, printer status, toolbar controls, and window ownership remain
-in the macOS target. SwiftUI navigation, document-browser lifecycle, compact
-formatting controls, and file import remain in the iOS target.
+in the macOS target. SwiftUI library navigation, compact formatting controls,
+coordinated autosave, and file import remain in the iOS target. The iOS app
+uses a normal `WindowGroup`; it doesn't opt into the system document-browser
+lifecycle.

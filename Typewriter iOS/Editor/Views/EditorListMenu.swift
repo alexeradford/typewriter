@@ -25,21 +25,9 @@ struct EditorListMenu: View {
         }
         .labelStyle(.iconOnly)
         .frame(minWidth: 44, minHeight: 44)
-        .background(
-            session.selectedListKind == nil
-                ? Color.clear
-                : Color.accentColor.opacity(0.14),
-            in: .rect(cornerRadius: 8)
+        .foregroundStyle(
+            session.selectedListKind == nil ? Color.primary : Color.accentColor
         )
-        .overlay {
-            RoundedRectangle(cornerRadius: 8)
-                .stroke(
-                    session.selectedListKind == nil
-                        ? Color.clear
-                        : Color.accentColor,
-                    lineWidth: 1.5
-                )
-        }
         .accessibilityAddTraits(
             session.selectedListKind == nil ? [] : .isSelected
         )

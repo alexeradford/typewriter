@@ -42,4 +42,33 @@ struct EditorTextSystemTests {
         #expect(system.textStorage.string.contains("\t"))
         #expect(system.contentHeight(ensuringFullLayout: true) > 0)
     }
+
+    @Test("The editor remains a bounded, vertically scrollable viewport")
+    func editorScrollViewport() {
+        let content = NSAttributedString(
+            string: Array(repeating: "A line of editor content", count: 100)
+                .joined(separator: "\n"),
+            attributes: EditorTextSystem.defaultTypingAttributes
+        )
+        let system = EditorTextSystem(content: content, containerWidth: 272)
+        let textView = system.textView
+        textView.frame = CGRect(x: 0, y: 0, width: 320, height: 400)
+        textView.textContainerInset = UIEdgeInsets(
+            top: 28,
+            left: 24,
+            bottom: 72,
+            right: 24
+        )
+        textView.isScrollEnabled = true
+        system.configureContinuousLayout(containerWidth: 272)
+        _ = system.contentHeight(ensuringFullLayout: true)
+        textView.layoutIfNeeded()
+
+        #expect(textView.intrinsicContentSize.width == UIView.noIntrinsicMetric)
+        #expect(textView.intrinsicContentSize.height == UIView.noIntrinsicMetric)
+        #expect(textView.contentSize.height > textView.bounds.height)
+
+        textView.setContentOffset(CGPoint(x: 0, y: 200), animated: false)
+        #expect(textView.contentOffset.y > 0)
+    }
 }

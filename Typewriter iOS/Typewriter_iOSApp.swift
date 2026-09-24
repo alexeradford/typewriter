@@ -10,11 +10,8 @@ import SwiftUI
 @main
 struct Typewriter_iOSApp: App {
     var body: some Scene {
-        DocumentGroup(newDocument: { TypewriterMobileDocument() }) { configuration in
-            ContentView(
-                document: configuration.document,
-                fileURL: configuration.fileURL
-            )
+        WindowGroup {
+            TypewriterRootView()
         }
     }
 }

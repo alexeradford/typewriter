@@ -24,9 +24,20 @@ final class EditorTextView: UITextView {
 
     var contentDidChange: (() -> Void)?
     var selectionDidChange: (() -> Void)?
+    var editingDidBegin: (() -> Void)?
+    var editingDidEnd: (() -> Void)?
 
     override var undoManager: UndoManager? {
         super.undoManager ?? fallbackUndoManager
+    }
+
+    /// The editor is a scroll viewport. Its document height must not become
+    /// the intrinsic height SwiftUI uses to size the representable.
+    override var intrinsicContentSize: CGSize {
+        CGSize(
+            width: UIView.noIntrinsicMetric,
+            height: UIView.noIntrinsicMetric
+        )
     }
 
     var string: String {
@@ -316,6 +327,14 @@ private struct UndoSnapshot {
 }
 
 extension EditorTextView: UIGestureRecognizerDelegate, UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        editingDidBegin?()
+    }
+
+    func textViewDidEndEditing(_ textView: UITextView) {
+        editingDidEnd?()
+    }
+
     func textViewDidChangeSelection(_ textView: UITextView) {
         listController.selectionDidChange()
         selectionDidChange?()
